@@ -44,7 +44,11 @@ class CKWPPExamplePlugin {
 
 	public function ckwppe_setup_admin() {
 		// Add our Menu Area
-		add_options_page( __( 'Example Plugin', CKWPPE_TEXT_DOMAIN ), __( 'Example', CKWPPE_TEXT_DOMAIN ), 'administrator', 'ckwppe-settings', array( $this, 'ckwppe_admin_page' ) );
+		add_options_page( __( 'Example Plugin', CKWPPE_TEXT_DOMAIN ), 
+						  __( 'Example', CKWPPE_TEXT_DOMAIN ), 
+						  'administrator', 'ckwppe-settings', 
+						  array( $this, 'ckwppe_admin_page' ) 
+						);
 	}
 
 	public function ckwppe_admin_page() {
@@ -55,7 +59,9 @@ class CKWPPExamplePlugin {
 				<?php wp_nonce_field( 'ckwppe-update-options' ); ?>
 				<table class="form-table">
 					<tr valign="top">
-						<th scope="row"><?php _e( 'Options:', CKWPPE_TEXT_DOMAIN ); ?><br /><span style="font-size: x-small;"><?php _e( 'With great power, comes great responsiblity.', CKWPPE_TEXT_DOMAIN ); ?></span></th>
+						<th scope="row"><?php _e( 'Options:', CKWPPE_TEXT_DOMAIN ); ?><br />
+							<span style="font-size: x-small;"><?php _e( 'With great power, comes great responsiblity.', CKWPPE_TEXT_DOMAIN ); ?></span>
+						</th>
 						<td>
 							<input type="checkbox" name="ckwppe_enable" value="1" <?php if ( get_option( 'ckwppe_enable' ) ) {?>checked="checked"<?php ;}?> /> <?php _e( 'Enable the Example Plugin to output', CKWPPE_TEXT_DOMAIN ); ?>
 						</td>
