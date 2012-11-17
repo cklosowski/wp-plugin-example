@@ -73,4 +73,4 @@ class CKWPPExamplePlugin {
 }
 
 
-$GLOBALS['ckwppe'] = CKWPPExamplePlugin::getInstance();
+$ckwpee = CKWPPExamplePlugin::getInstance();
